@@ -275,6 +275,7 @@ class DouyuShowIE(DouyuBaseIE):
         formats = []
         for name, url in traverse_obj(url_info, ('data', 'thumb_video', {dict.items}, ...)):
             video_url = traverse_obj(url, ('url', {url_or_none}))
+            print(name, video_url, "abc")
             if video_url:
                 ext = determine_ext(video_url)
                 formats.append({
