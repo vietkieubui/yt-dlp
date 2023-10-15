@@ -5,9 +5,11 @@ def get_sec(time_str):
     return int(h) * 3600 + int(m) * 60 + int(s)
 
 
-
-timestamp1 = '01:00:00'
-timestamp2 = '01:00:55'
+video_name = '0910_LianHuaDao_Katarina_vs_Jayce_MT_13_19.mp4'
+video_ouput_name = "cutvideo.mp4"
+# video_ouput_name = "1010_Ashuai_Pyke_ft_Kaisa_vs_Gragas_ft_Ezreal_MT_13_19.mp4"
+timestamp1 = '00:10:00'
+timestamp2 = '00:12:21'
 start_time = get_sec(timestamp1)
 end_time = get_sec(timestamp2)
-ffmpeg_extract_subclip("【2023-10-09 14点场】自宇666：韩服千分顶尖局， [6Aw87O8oGKDMYGkg].mp4", start_time, end_time, targetname="test.mp4")
+ffmpeg_extract_subclip(video_name, start_time, end_time, targetname=video_ouput_name)
